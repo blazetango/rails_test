@@ -1,5 +1,6 @@
 class Tenant < ActiveRecord::Base
 
+  has_many :tenant_apis, inverse_of: :tenant
   before_create :generate_api_key
   
   private
